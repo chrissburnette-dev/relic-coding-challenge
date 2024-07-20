@@ -1,4 +1,4 @@
-package com.example.reliccodingchallenge.config;
+package com.example.reliccodingchallenge.exception;
 
 import com.example.reliccodingchallenge.dto.NumberRequest;
 import com.example.reliccodingchallenge.service.NumberService;
@@ -14,23 +14,32 @@ import org.springframework.web.socket.client.standard.StandardWebSocketClient;
 import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class WebSocketIntegrationTest {
+@ActiveProfiles("test")
+public class GlobalExceptionHandlerIntegrationTest {
 
     @LocalServerPort
     private int port;
-
     @Test
-    public void testWebSocketCommunication() throws ExecutionException, InterruptedException {
+    public void testWebSocketCommunicationInvalidNumber() throws ExecutionException, InterruptedException, TimeoutException {
         WebSocketStompClient stompClient = new WebSocketStompClient(new StandardWebSocketClient());
         stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 
         String url = new StringBuilder("ws://localhost:").append(port).append("/ws").toString();
-        StompSession session = stompClient.connect(url, new StompSessionHandlerAdapter(){}).get();
 
-        NumberRequest request = new NumberRequest("123456789");
+        StompSession session = stompClient.connect(url, new StompSessionHandlerAdapter() {})
+                .get(5, TimeUnit.SECONDS);
+
+        assertNotNull(session);
+
+        NumberRequest request = new NumberRequest("invalid");
         session.send("/app/submitNumber", request);
+
     }
 
 }

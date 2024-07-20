@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ScheduledStatisticsServiceTest {
@@ -20,8 +22,8 @@ public class ScheduledStatisticsServiceTest {
     public void testIncrementUnique() {
 
         statisticsService.incrementUnique();
-        assertEquals(1, (int) ReflectionTestUtils.getField(statisticsService, "totalUniqueNumbers"));
-        assertEquals(1, (int) ReflectionTestUtils.getField(statisticsService, "newUniqueNumbers"));
+        assertEquals(1, ((AtomicInteger) ReflectionTestUtils.getField(statisticsService, "totalUniqueNumbers")).get());
+        assertEquals(1, ((AtomicInteger) ReflectionTestUtils.getField(statisticsService, "newUniqueNumbers")).get());
 
     }
 
@@ -29,7 +31,7 @@ public class ScheduledStatisticsServiceTest {
     public void testIncrementDuplicate() {
 
         statisticsService.incrementDuplicate();
-        assertEquals(1, (int) ReflectionTestUtils.getField(statisticsService, "newDuplicateNumbers"));
+        assertEquals(1, ((AtomicInteger) ReflectionTestUtils.getField(statisticsService, "newDuplicateNumbers")).get());
 
     }
 
@@ -38,10 +40,15 @@ public class ScheduledStatisticsServiceTest {
 
         statisticsService.incrementUnique();
         statisticsService.incrementDuplicate();
+
+        //Check the values before calling reportStatistics. Due to getAndSet() .
+        assertEquals(1, ((AtomicInteger) ReflectionTestUtils.getField(statisticsService, "newUniqueNumbers")).get());
+        assertEquals(1, ((AtomicInteger) ReflectionTestUtils.getField(statisticsService, "newDuplicateNumbers")).get());
+
         statisticsService.reportStatistics();
 
-        assertEquals(0, (int) ReflectionTestUtils.getField(statisticsService, "newUniqueNumbers"));
-        assertEquals(0, (int) ReflectionTestUtils.getField(statisticsService, "newDuplicateNumbers"));
+        assertEquals(0, ((AtomicInteger) ReflectionTestUtils.getField(statisticsService, "newUniqueNumbers")).get());
+        assertEquals(0, ((AtomicInteger) ReflectionTestUtils.getField(statisticsService, "newDuplicateNumbers")).get());
 
     }
 }

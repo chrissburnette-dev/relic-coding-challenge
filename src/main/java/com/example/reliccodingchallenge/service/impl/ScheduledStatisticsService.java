@@ -14,7 +14,7 @@ public class ScheduledStatisticsService extends AbstractStatisticsService {
         int duplicateCount = newDuplicateNumbers.getAndSet(0);
         int totalUnique = totalUniqueNumbers.get();
 
-        System.out.printf(String.format("Received %d unique numbers, %d duplicates, Unique total: %d%d",
+        System.out.printf(String.format("Received %d unique numbers, %d duplicates, Unique total: %d",
                 uniqueCount, duplicateCount, totalUnique));
     }
 }

@@ -8,6 +8,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,9 @@ public class DuplicatedListNumberService implements NumberService {
     private static final String FILE_PATH = "./resources/static/numbers.log";
     private static final Logger logger = LoggerFactory.getLogger(DuplicatedListNumberService.class);
 
+    @Value("${app.terminate.on.exit:false}")
+    private boolean terminateOnExit;
+
     public DuplicatedListNumberService(StatisticsService statisticsService) {
         this.statisticsService = statisticsService;
     }
@@ -39,6 +43,7 @@ public class DuplicatedListNumberService implements NumberService {
     private void init() {
         try {
             final Path numbersFilePath = Paths.get(FILE_PATH);
+            Files.createDirectories(numbersFilePath.getParent());
             Files.deleteIfExists(numbersFilePath);
             Files.createFile(numbersFilePath);
             logger.info("Log info created at {}", FILE_PATH);
@@ -97,7 +102,10 @@ public class DuplicatedListNumberService implements NumberService {
     }
     private void terminateApplication() {
         shutdown();
-        System.exit(0);
+        if(terminateOnExit) {
+            logger.info("Application terminating...");
+            System.exit(0);
+        }
     }
 
     private void closeConnection(SimpMessageHeaderAccessor headerAccessor) {
