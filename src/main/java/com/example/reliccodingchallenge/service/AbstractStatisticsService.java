@@ -2,6 +2,10 @@ package com.example.reliccodingchallenge.service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Abstract class
+ * @author Christopher Burnette / chrisburnette188@gmail.com
+ */
 public abstract class AbstractStatisticsService implements StatisticsService {
 
     protected final AtomicInteger totalUniqueNumbers = new AtomicInteger(0);

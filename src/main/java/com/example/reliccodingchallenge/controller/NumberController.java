@@ -12,6 +12,11 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Rest Controller for Number operations.
+ * @author Christopher Burnette / chrisburnette188@gmail.com
+ */
+
 @RestController
 public class NumberController {
 
@@ -24,7 +29,8 @@ public class NumberController {
 
     @MessageMapping("/submitNumber")
     @SendTo("/topic/confirmation")
-    public ConfirmationResponse copyToList(@Valid NumberRequest numberInput, SimpMessageHeaderAccessor headerAccessor) throws InterruptedException {
+    public ConfirmationResponse copyToList(@Valid NumberRequest numberInput,
+                                           SimpMessageHeaderAccessor headerAccessor) throws InterruptedException {
         Thread.sleep(1000);
         return numberService.handleNumberRequest(numberInput, headerAccessor);
     }

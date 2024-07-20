@@ -23,6 +23,10 @@ import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Concrete loosely coupled implementation of NumberService interface.
+ * @author Christopher Burnette / chrisburnette188@gmail.com
+ */
 @Service
 public class DuplicatedListNumberService implements NumberService {
 

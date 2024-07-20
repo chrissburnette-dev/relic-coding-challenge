@@ -4,6 +4,11 @@ import com.example.reliccodingchallenge.service.AbstractStatisticsService;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+/**
+ * Scheduling concrete implementation class of AbstractStatisticsService.
+ * @author Christopher Burnette / chrisburnette188@gmail.com
+ */
+
 @Service
 public class ScheduledStatisticsService extends AbstractStatisticsService {
 

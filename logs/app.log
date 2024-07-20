@@ -3151,3 +3151,643 @@ org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidE
 2024-07-20T13:48:24.963-06:00 DEBUG 46859 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
 2024-07-20T13:48:24.963-06:00 DEBUG 46859 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
 2024-07-20T13:48:24.966-06:00  INFO 46859 --- [relic-coding-challenge] [SpringApplicationShutdownHook] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
+2024-07-20T14:27:25.519-06:00  INFO 47685 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 47685 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T14:27:25.520-06:00 DEBUG 47685 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T14:27:25.520-06:00  INFO 47685 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T14:27:26.207-06:00  INFO 47685 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T14:27:26.207-06:00  INFO 47685 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T14:27:26.207-06:00  INFO 47685 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-20T14:27:26.223-06:00  INFO 47685 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.817 seconds (process running for 1.185)
+2024-07-20T15:05:29.734-06:00  INFO 48437 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48437 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:05:29.735-06:00 DEBUG 48437 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:05:29.735-06:00  INFO 48437 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:05:30.433-06:00  WARN 48437 --- [relic-coding-challenge] [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.example.reliccodingchallenge.exception.SocketGlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+2024-07-20T15:05:30.436-06:00  INFO 48437 --- [relic-coding-challenge] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T15:05:30.443-06:00 ERROR 48437 --- [relic-coding-challenge] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.example.reliccodingchallenge.exception.SocketGlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:122) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:106) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:63) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.example.reliccodingchallenge.exception.SocketGlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 97 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.example.reliccodingchallenge.exception.SocketGlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.addExceptionMapping(ExceptionHandlerMethodResolver.java:114) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:78) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:289) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:256) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1063) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1005) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 98 common frames omitted
+
+2024-07-20T15:05:30.451-06:00  WARN 48437 --- [relic-coding-challenge] [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener] to prepare test instance [com.example.reliccodingchallenge.controller.NumberControllerTest@1e40fbb3]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@2416c658 testClass = com.example.reliccodingchallenge.controller.NumberControllerTest, locations = [], classes = [com.example.reliccodingchallenge.RelicCodingChallengeApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6d5f4900 key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4a883b15, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5824a83d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@57924577, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@2eae8e6e, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@2cf3d63b, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@a9a2bd11, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@2af4f704, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@5ddeb7cb, org.springframework.boot.test.context.SpringBootTestAnnotation@9d10b3a2], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.postProcessFields(MockitoTestExecutionListener.java:122) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.injectFields(MockitoTestExecutionListener.java:106) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:63) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.example.reliccodingchallenge.exception.SocketGlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.11.jar:6.1.11]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.2.jar:3.3.2]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.11.jar:6.1.11]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.11.jar:6.1.11]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.example.reliccodingchallenge.exception.SocketGlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 97 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.example.reliccodingchallenge.exception.SocketGlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.addExceptionMapping(ExceptionHandlerMethodResolver.java:114) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:78) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:289) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:256) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1063) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1005) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 98 common frames omitted
+
+2024-07-20T15:06:53.915-06:00  INFO 48463 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48463 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:06:53.916-06:00 DEBUG 48463 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:06:53.916-06:00  INFO 48463 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:06:54.650-06:00  INFO 48463 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:06:54.650-06:00  INFO 48463 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:06:54.651-06:00  INFO 48463 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-20T15:06:54.663-06:00  INFO 48463 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.875 seconds (process running for 1.27)
+2024-07-20T15:16:54.841-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : Starting WebSocketIntegrationTest using Java 17.0.8 with PID 48773 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:16:54.842-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:16:54.842-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:16:55.260-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-07-20T15:16:55.264-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-20T15:16:55.265-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-20T15:16:55.281-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-20T15:16:55.282-06:00  INFO 48773 --- [relic-coding-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 433 ms
+2024-07-20T15:16:55.336-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Log info created at ./resources/static/numbers.log
+2024-07-20T15:16:55.376-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-07-20T15:16:55.400-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	c.e.r.c.NumberController:
+	{[MESSAGE],[/submitNumber]}: copyToList(NumberRequest,SimpMessageHeaderAccessor)
+2024-07-20T15:16:55.401-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-07-20T15:16:55.522-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-07-20T15:16:55.572-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 51885 (http) with context path '/'
+2024-07-20T15:16:55.574-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:16:55.575-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:16:55.575-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-07-20T15:16:55.575-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66234b0f]
+2024-07-20T15:16:55.575-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66234b0f]
+2024-07-20T15:16:55.576-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66234b0f]]
+2024-07-20T15:16:55.576-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-07-20T15:16:55.576-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:55.577-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:55.585-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : Started WebSocketIntegrationTest in 0.849 seconds (process running for 1.206)
+2024-07-20T15:16:55.927-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.w.s.c.s.StandardWebSocketClient      : Connecting to ws://localhost:51885/ws
+2024-07-20T15:16:55.959-06:00  INFO 48773 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-20T15:16:55.959-06:00  INFO 48773 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-20T15:16:55.960-06:00  INFO 48773 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-20T15:16:55.967-06:00 DEBUG 48773 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@7c1503a3
+2024-07-20T15:16:55.968-06:00 DEBUG 48773 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2024-07-20T15:16:55.977-06:00 DEBUG 48773 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=97b9fc35-af1c-64f6-93bf-fc25dfa23823, uri=null]
+2024-07-20T15:16:55.977-06:00 DEBUG 48773 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=8ade79d6-c4d1-b968-8c28-01f307ffd077, uri=ws://localhost:51885/ws]
+2024-07-20T15:16:55.978-06:00 DEBUG 48773 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] o.s.m.simp.stomp.DefaultStompSession     : Connection established in session id=82ac8fff-6d72-3282-1e4e-1b7e69fc4692
+2024-07-20T15:16:55.987-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-2] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing CONNECT session=8ade79d6-c4d1-b968-8c28-01f307ffd077
+2024-07-20T15:16:56.002-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Searching methods to handle SEND /app/submitNumber session=8ade79d6-c4d1-b968-8c28-01f307ffd077 application/json payload={"number":"123456789"}, lookupDestination='/submitNumber'
+2024-07-20T15:16:56.003-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Invoking NumberController#copyToList[2 args]
+2024-07-20T15:16:56.010-06:00  INFO 48773 --- [relic-coding-challenge] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.reliccodingchallenge.RelicCodingChallengeApplicationTests]: RelicCodingChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-20T15:16:56.012-06:00  INFO 48773 --- [relic-coding-challenge] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.reliccodingchallenge.RelicCodingChallengeApplication for test class com.example.reliccodingchallenge.RelicCodingChallengeApplicationTests
+2024-07-20T15:16:56.023-06:00  INFO 48773 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : Starting RelicCodingChallengeApplicationTests using Java 17.0.8 with PID 48773 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:16:56.024-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:16:56.024-06:00  INFO 48773 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:16:56.102-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Log info created at ./resources/static/numbers.log
+2024-07-20T15:16:56.112-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-07-20T15:16:56.123-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	c.e.r.c.NumberController:
+	{[MESSAGE],[/submitNumber]}: copyToList(NumberRequest,SimpMessageHeaderAccessor)
+2024-07-20T15:16:56.124-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-07-20T15:16:56.174-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-07-20T15:16:56.179-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:16:56.179-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:16:56.179-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-07-20T15:16:56.179-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5cfe28e1]
+2024-07-20T15:16:56.179-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5cfe28e1]
+2024-07-20T15:16:56.180-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5cfe28e1]]
+2024-07-20T15:16:56.180-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-07-20T15:16:56.180-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:56.180-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:56.182-06:00  INFO 48773 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : Started RelicCodingChallengeApplicationTests in 0.167 seconds (process running for 1.803)
+2024-07-20T15:16:56.192-06:00  INFO 48773 --- [relic-coding-challenge] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.reliccodingchallenge.controller.NumberControllerTest]: NumberControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-20T15:16:56.200-06:00  INFO 48773 --- [relic-coding-challenge] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.reliccodingchallenge.RelicCodingChallengeApplication for test class com.example.reliccodingchallenge.controller.NumberControllerTest
+2024-07-20T15:16:56.209-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48773 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:16:56.209-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:16:56.210-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:16:56.399-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:16:56.399-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:16:56.400-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-20T15:16:56.406-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.205 seconds (process running for 2.027)
+2024-07-20T15:16:56.577-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Received termination command.
+2024-07-20T15:16:56.578-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
+2024-07-20T15:16:56.589-06:00  WARN 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Invalid number received: invalid
+2024-07-20T15:16:56.596-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Connection closed due to invalid input.
+2024-07-20T15:16:56.602-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Processed unique number: 123456789
+2024-07-20T15:16:56.619-06:00  INFO 48773 --- [relic-coding-challenge] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.reliccodingchallenge.service.DuplicatedNumberServiceIntegrationTest]: DuplicatedNumberServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-20T15:16:56.629-06:00  INFO 48773 --- [relic-coding-challenge] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.reliccodingchallenge.RelicCodingChallengeApplication for test class com.example.reliccodingchallenge.service.DuplicatedNumberServiceIntegrationTest
+2024-07-20T15:16:56.634-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Processed unique number: 123456789
+2024-07-20T15:16:56.635-06:00  INFO 48773 --- [relic-coding-challenge] [pool-4-thread-1] c.e.r.s.i.DuplicatedListNumberService    : Number written to file: 123456789
+2024-07-20T15:16:56.645-06:00  INFO 48773 --- [relic-coding-challenge] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.reliccodingchallenge.exception.GlobalExceptionHandlerIntegrationTest]: GlobalExceptionHandlerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-20T15:16:56.651-06:00  INFO 48773 --- [relic-coding-challenge] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.reliccodingchallenge.RelicCodingChallengeApplication for test class com.example.reliccodingchallenge.exception.GlobalExceptionHandlerIntegrationTest
+2024-07-20T15:16:56.676-06:00  INFO 48773 --- [relic-coding-challenge] [main] .e.GlobalExceptionHandlerIntegrationTest : Starting GlobalExceptionHandlerIntegrationTest using Java 17.0.8 with PID 48773 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:16:56.676-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] .e.GlobalExceptionHandlerIntegrationTest : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:16:56.677-06:00  INFO 48773 --- [relic-coding-challenge] [main] .e.GlobalExceptionHandlerIntegrationTest : The following 1 profile is active: "test"
+2024-07-20T15:16:56.902-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-07-20T15:16:56.903-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-20T15:16:56.904-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-20T15:16:56.912-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-07-20T15:16:56.913-06:00  INFO 48773 --- [relic-coding-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 235 ms
+2024-07-20T15:16:56.957-06:00  INFO 48773 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Log info created at ./resources/static/numbers.log
+2024-07-20T15:16:57.000-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-07-20T15:16:57.032-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	c.e.r.c.NumberController:
+	{[MESSAGE],[/submitNumber]}: copyToList(NumberRequest,SimpMessageHeaderAccessor)
+2024-07-20T15:16:57.033-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-07-20T15:16:57.049-06:00  INFO 48773 --- [relic-coding-challenge] [clientInboundChannel-4] c.e.r.s.i.DuplicatedListNumberService    : Processed unique number: 123456789
+2024-07-20T15:16:57.049-06:00  INFO 48773 --- [relic-coding-challenge] [pool-3-thread-1] c.e.r.s.i.DuplicatedListNumberService    : Number written to file: 123456789
+2024-07-20T15:16:57.051-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-4] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing MESSAGE destination=/topic/confirmation session=8ade79d6-c4d1-b968-8c28-01f307ffd077 payload={"message":"Number accepted."}
+2024-07-20T15:16:57.141-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-07-20T15:16:57.164-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 51887 (http) with context path '/'
+2024-07-20T15:16:57.164-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:16:57.164-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:16:57.164-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-07-20T15:16:57.165-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@72321701]
+2024-07-20T15:16:57.165-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@72321701]
+2024-07-20T15:16:57.165-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@72321701]]
+2024-07-20T15:16:57.165-06:00  INFO 48773 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-07-20T15:16:57.165-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.165-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.170-06:00  INFO 48773 --- [relic-coding-challenge] [main] .e.GlobalExceptionHandlerIntegrationTest : Started GlobalExceptionHandlerIntegrationTest in 0.515 seconds (process running for 2.791)
+2024-07-20T15:16:57.173-06:00 DEBUG 48773 --- [relic-coding-challenge] [main] o.s.w.s.c.s.StandardWebSocketClient      : Connecting to ws://localhost:51887/ws
+2024-07-20T15:16:57.175-06:00  INFO 48773 --- [relic-coding-challenge] [http-nio-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-20T15:16:57.175-06:00  INFO 48773 --- [relic-coding-challenge] [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-20T15:16:57.175-06:00  INFO 48773 --- [relic-coding-challenge] [http-nio-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-07-20T15:16:57.176-06:00 DEBUG 48773 --- [relic-coding-challenge] [http-nio-auto-2-exec-1] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@51ac72f7
+2024-07-20T15:16:57.176-06:00 DEBUG 48773 --- [relic-coding-challenge] [http-nio-auto-2-exec-1] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2024-07-20T15:16:57.177-06:00 DEBUG 48773 --- [relic-coding-challenge] [http-nio-auto-2-exec-1] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=b01e9c12-2e92-2fbb-f829-4a6daa0c8e38, uri=ws://localhost:51887/ws]
+2024-07-20T15:16:57.177-06:00 DEBUG 48773 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=d5d6c3fc-a561-dff9-9568-c2695360ecfe, uri=null]
+2024-07-20T15:16:57.177-06:00 DEBUG 48773 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] o.s.m.simp.stomp.DefaultStompSession     : Connection established in session id=22245948-fee1-6856-e5b3-d885d38793c1
+2024-07-20T15:16:57.178-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-2] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing CONNECT session=b01e9c12-2e92-2fbb-f829-4a6daa0c8e38
+2024-07-20T15:16:57.180-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Searching methods to handle SEND /app/submitNumber session=b01e9c12-2e92-2fbb-f829-4a6daa0c8e38 application/json payload={"number":"invalid"}, lookupDestination='/submitNumber'
+2024-07-20T15:16:57.181-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Invoking NumberController#copyToList[2 args]
+2024-07-20T15:16:57.188-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Searching methods to handle MethodArgumentNotValidException
+2024-07-20T15:16:57.190-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:16:57.190-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=8ade79d6-c4d1-b968-8c28-01f307ffd077, uri=ws://localhost:51885/ws]
+2024-07-20T15:16:57.188-06:00 ERROR 48773 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Unhandled exception from message handler method
+
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public com.example.reliccodingchallenge.dto.ConfirmationResponse com.example.reliccodingchallenge.controller.NumberController.copyToList(com.example.reliccodingchallenge.dto.NumberRequest,org.springframework.messaging.simp.SimpMessageHeaderAccessor) throws java.lang.InterruptedException: 1 error(s): [Field error in object 'numberInput' on field 'number': rejected value [invalid]; codes [Pattern.numberInput.number,Pattern.number,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [numberInput.number,number]; arguments []; default message [number],[Ljakarta.validation.constraints.Pattern$Flag;@7ba9196a,\d{9}]; default message [Number must be 9 digits.]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.validate(PayloadMethodArgumentResolver.java:223) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:154) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:567) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:529) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-20T15:16:57.191-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=8ade79d6-c4d1-b968-8c28-01f307ffd077, uri=ws://localhost:51885/ws] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:16:57.191-06:00 DEBUG 48773 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-6] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=97b9fc35-af1c-64f6-93bf-fc25dfa23823, uri=null] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:16:57.191-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.m.SubProtocolWebSocketHandler    : Clearing session 8ade79d6-c4d1-b968-8c28-01f307ffd077
+2024-07-20T15:16:57.191-06:00 DEBUG 48773 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-6] o.s.m.simp.stomp.DefaultStompSession     : Connection closed in session id=82ac8fff-6d72-3282-1e4e-1b7e69fc4692
+2024-07-20T15:16:57.192-06:00 DEBUG 48773 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-6] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=97b9fc35-af1c-64f6-93bf-fc25dfa23823, uri=null]
+2024-07-20T15:16:57.192-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-8] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing DISCONNECT session=8ade79d6-c4d1-b968-8c28-01f307ffd077
+2024-07-20T15:16:57.192-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:16:57.193-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-07-20T15:16:57.193-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66234b0f]]
+2024-07-20T15:16:57.193-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66234b0f]
+2024-07-20T15:16:57.193-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@66234b0f]
+2024-07-20T15:16:57.193-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2024-07-20T15:16:57.193-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.193-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.199-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
+2024-07-20T15:16:57.203-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:16:57.203-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:16:57.203-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-07-20T15:16:57.203-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5cfe28e1]]
+2024-07-20T15:16:57.203-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5cfe28e1]
+2024-07-20T15:16:57.204-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@5cfe28e1]
+2024-07-20T15:16:57.204-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2024-07-20T15:16:57.204-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.204-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.205-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
+2024-07-20T15:16:57.206-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:16:57.206-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=b01e9c12-2e92-2fbb-f829-4a6daa0c8e38, uri=ws://localhost:51887/ws]
+2024-07-20T15:16:57.206-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=b01e9c12-2e92-2fbb-f829-4a6daa0c8e38, uri=ws://localhost:51887/ws] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:16:57.206-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.m.SubProtocolWebSocketHandler    : Clearing session b01e9c12-2e92-2fbb-f829-4a6daa0c8e38
+2024-07-20T15:16:57.206-06:00 DEBUG 48773 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-7] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=d5d6c3fc-a561-dff9-9568-c2695360ecfe, uri=null] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-7] o.s.m.simp.stomp.DefaultStompSession     : Connection closed in session id=22245948-fee1-6856-e5b3-d885d38793c1
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-7] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=d5d6c3fc-a561-dff9-9568-c2695360ecfe, uri=null]
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [clientInboundChannel-8] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing DISCONNECT session=b01e9c12-2e92-2fbb-f829-4a6daa0c8e38
+2024-07-20T15:16:57.207-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-07-20T15:16:57.207-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@72321701]]
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@72321701]
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@72321701]
+2024-07-20T15:16:57.207-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.207-06:00 DEBUG 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:16:57.210-06:00  INFO 48773 --- [relic-coding-challenge] [SpringApplicationShutdownHook] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
+2024-07-20T15:24:17.743-06:00  INFO 48905 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48905 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:24:17.743-06:00 DEBUG 48905 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:24:17.744-06:00  INFO 48905 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:24:18.452-06:00  INFO 48905 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:24:18.452-06:00  INFO 48905 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:24:18.453-06:00  INFO 48905 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-20T15:24:18.471-06:00  INFO 48905 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.841 seconds (process running for 1.196)
+2024-07-20T15:24:21.040-06:00  INFO 48912 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48912 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:24:21.040-06:00 DEBUG 48912 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:24:21.040-06:00  INFO 48912 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:24:21.713-06:00  INFO 48912 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:24:21.713-06:00  INFO 48912 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:24:21.713-06:00  INFO 48912 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-20T15:24:21.723-06:00  INFO 48912 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.815 seconds (process running for 1.441)
+2024-07-20T15:24:36.593-06:00  INFO 48920 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48920 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:24:36.594-06:00 DEBUG 48920 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:24:36.594-06:00  INFO 48920 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:24:37.247-06:00  INFO 48920 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:24:37.247-06:00  INFO 48920 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:24:37.248-06:00  INFO 48920 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-20T15:24:37.257-06:00  INFO 48920 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.793 seconds (process running for 1.193)
+2024-07-20T15:24:53.828-06:00  INFO 48932 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48932 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:24:53.829-06:00 DEBUG 48932 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:24:53.829-06:00  INFO 48932 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:24:54.477-06:00  INFO 48932 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:24:54.477-06:00  INFO 48932 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:24:54.478-06:00  INFO 48932 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-20T15:24:54.488-06:00  INFO 48932 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.787 seconds (process running for 1.26)
+2024-07-20T15:28:00.432-06:00  INFO 48984 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 48984 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:28:00.432-06:00 DEBUG 48984 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:28:00.432-06:00  INFO 48984 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:28:01.123-06:00  INFO 48984 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:28:01.123-06:00  INFO 48984 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:28:01.124-06:00  INFO 48984 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-07-20T15:28:01.135-06:00  INFO 48984 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.849 seconds (process running for 1.282)
+2024-07-20T15:30:17.804-06:00  INFO 49022 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 49022 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:30:17.804-06:00 DEBUG 49022 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:30:17.804-06:00  INFO 49022 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:30:18.483-06:00  INFO 49022 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:30:18.484-06:00  INFO 49022 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:30:18.484-06:00  INFO 49022 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-20T15:30:18.494-06:00  INFO 49022 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.818 seconds (process running for 1.204)
+2024-07-20T15:36:53.828-06:00  INFO 49105 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Starting NumberControllerTest using Java 17.0.8 with PID 49105 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:36:53.829-06:00 DEBUG 49105 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:36:53.829-06:00  INFO 49105 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:36:54.499-06:00  INFO 49105 --- [relic-coding-challenge] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-07-20T15:36:54.499-06:00  INFO 49105 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-07-20T15:36:54.499-06:00  INFO 49105 --- [relic-coding-challenge] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-07-20T15:36:54.509-06:00  INFO 49105 --- [relic-coding-challenge] [main] c.e.r.controller.NumberControllerTest    : Started NumberControllerTest in 0.81 seconds (process running for 1.227)
+2024-07-20T15:41:55.856-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : Starting WebSocketIntegrationTest using Java 17.0.8 with PID 49230 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:41:55.856-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:41:55.857-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : The following 1 profile is active: "test"
+2024-07-20T15:41:56.257-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-07-20T15:41:56.261-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-20T15:41:56.261-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-20T15:41:56.278-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-20T15:41:56.278-06:00  INFO 49230 --- [relic-coding-challenge] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 415 ms
+2024-07-20T15:41:56.330-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Log info created at ./resources/static/numbers.log
+2024-07-20T15:41:56.365-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-07-20T15:41:56.387-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	c.e.r.c.NumberController:
+	{[MESSAGE],[/submitNumber]}: copyToList(NumberRequest,SimpMessageHeaderAccessor)
+2024-07-20T15:41:56.389-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-07-20T15:41:56.498-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-07-20T15:41:56.529-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 52076 (http) with context path '/'
+2024-07-20T15:41:56.530-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:41:56.530-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:41:56.530-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-07-20T15:41:56.530-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1fc0d9b4]
+2024-07-20T15:41:56.530-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1fc0d9b4]
+2024-07-20T15:41:56.530-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1fc0d9b4]]
+2024-07-20T15:41:56.531-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-07-20T15:41:56.531-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:56.531-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:56.541-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.config.WebSocketIntegrationTest    : Started WebSocketIntegrationTest in 0.787 seconds (process running for 1.098)
+2024-07-20T15:41:56.886-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.w.s.c.s.StandardWebSocketClient      : Connecting to ws://localhost:52076/ws
+2024-07-20T15:41:56.914-06:00  INFO 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-20T15:41:56.914-06:00  INFO 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-20T15:41:56.915-06:00  INFO 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-20T15:41:56.921-06:00 DEBUG 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@62c3f556
+2024-07-20T15:41:56.922-06:00 DEBUG 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2024-07-20T15:41:56.930-06:00 DEBUG 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-1] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=c032fd76-0759-e15c-1a46-aeda0a93aa0a, uri=ws://localhost:52076/ws]
+2024-07-20T15:41:56.930-06:00 DEBUG 49230 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=51eca301-6c6e-afcc-f214-460965c238f3, uri=null]
+2024-07-20T15:41:56.930-06:00 DEBUG 49230 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] o.s.m.simp.stomp.DefaultStompSession     : Connection established in session id=31c81cbd-d7db-c9bd-7d0f-62de0117dd98
+2024-07-20T15:41:56.939-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-2] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing CONNECT session=c032fd76-0759-e15c-1a46-aeda0a93aa0a
+2024-07-20T15:41:56.953-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Searching methods to handle SEND /app/submitNumber session=c032fd76-0759-e15c-1a46-aeda0a93aa0a application/json payload={"number":"123456789"}, lookupDestination='/submitNumber'
+2024-07-20T15:41:56.955-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-4] .WebSocketAnnotationMethodMessageHandler : Invoking NumberController#copyToList[2 args]
+2024-07-20T15:41:56.961-06:00  INFO 49230 --- [relic-coding-challenge] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.reliccodingchallenge.RelicCodingChallengeApplicationTests]: RelicCodingChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-20T15:41:56.963-06:00  INFO 49230 --- [relic-coding-challenge] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.reliccodingchallenge.RelicCodingChallengeApplication for test class com.example.reliccodingchallenge.RelicCodingChallengeApplicationTests
+2024-07-20T15:41:56.973-06:00  INFO 49230 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : Starting RelicCodingChallengeApplicationTests using Java 17.0.8 with PID 49230 (started by igorzelaya in /Users/igorzelaya/SoftwareDev/relic-coding-challenge)
+2024-07-20T15:41:56.973-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-20T15:41:56.973-06:00  INFO 49230 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2024-07-20T15:41:57.055-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Log info created at ./resources/static/numbers.log
+2024-07-20T15:41:57.068-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Patterns [/ws] in 'stompWebSocketHandlerMapping'
+2024-07-20T15:41:57.079-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	c.e.r.c.NumberController:
+	{[MESSAGE],[/submitNumber]}: copyToList(NumberRequest,SimpMessageHeaderAccessor)
+2024-07-20T15:41:57.079-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] .WebSocketAnnotationMethodMessageHandler : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2024-07-20T15:41:57.133-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-07-20T15:41:57.139-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:41:57.140-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:41:57.140-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-07-20T15:41:57.140-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75dbe490]
+2024-07-20T15:41:57.140-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75dbe490]
+2024-07-20T15:41:57.140-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75dbe490]]
+2024-07-20T15:41:57.140-06:00  INFO 49230 --- [relic-coding-challenge] [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-07-20T15:41:57.140-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:57.140-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:57.147-06:00  INFO 49230 --- [relic-coding-challenge] [main] e.r.RelicCodingChallengeApplicationTests : Started RelicCodingChallengeApplicationTests in 0.181 seconds (process running for 1.704)
+2024-07-20T15:41:57.313-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Received termination command.
+2024-07-20T15:41:57.320-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
+2024-07-20T15:41:57.326-06:00  WARN 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Invalid number received: invalid
+2024-07-20T15:41:57.332-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Connection closed due to invalid input.
+2024-07-20T15:41:57.336-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Processed unique number: 123456789
+2024-07-20T15:41:57.349-06:00  INFO 49230 --- [relic-coding-challenge] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.reliccodingchallenge.service.DuplicatedNumberServiceIntegrationTest]: DuplicatedNumberServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-20T15:41:57.359-06:00  INFO 49230 --- [relic-coding-challenge] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.reliccodingchallenge.RelicCodingChallengeApplication for test class com.example.reliccodingchallenge.service.DuplicatedNumberServiceIntegrationTest
+2024-07-20T15:41:57.364-06:00  INFO 49230 --- [relic-coding-challenge] [main] c.e.r.s.i.DuplicatedListNumberService    : Processed unique number: 123456789
+2024-07-20T15:41:57.365-06:00  INFO 49230 --- [relic-coding-challenge] [pool-4-thread-1] c.e.r.s.i.DuplicatedListNumberService    : Number written to file: 123456789
+2024-07-20T15:41:57.374-06:00  INFO 49230 --- [relic-coding-challenge] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.reliccodingchallenge.exception.GlobalExceptionHandlerIntegrationTest]: GlobalExceptionHandlerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-07-20T15:41:57.380-06:00  INFO 49230 --- [relic-coding-challenge] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.reliccodingchallenge.RelicCodingChallengeApplication for test class com.example.reliccodingchallenge.exception.GlobalExceptionHandlerIntegrationTest
+2024-07-20T15:41:57.384-06:00 DEBUG 49230 --- [relic-coding-challenge] [main] o.s.w.s.c.s.StandardWebSocketClient      : Connecting to ws://localhost:52076/ws
+2024-07-20T15:41:57.386-06:00 DEBUG 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-4] o.s.w.s.s.s.WebSocketHandlerMapping      : Mapped to org.springframework.web.socket.server.support.WebSocketHttpRequestHandler@62c3f556
+2024-07-20T15:41:57.386-06:00 DEBUG 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-4] o.s.w.s.s.s.WebSocketHttpRequestHandler  : GET /ws
+2024-07-20T15:41:57.387-06:00 DEBUG 49230 --- [relic-coding-challenge] [http-nio-auto-1-exec-4] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=17764f12-7008-df93-7c42-144da30fd941, uri=ws://localhost:52076/ws]
+2024-07-20T15:41:57.387-06:00 DEBUG 49230 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] s.w.s.h.LoggingWebSocketHandlerDecorator : New StandardWebSocketSession[id=c3a151cf-16ee-b639-f5bf-692951c61661, uri=null]
+2024-07-20T15:41:57.387-06:00 DEBUG 49230 --- [relic-coding-challenge] [SimpleAsyncTaskExecutor-1] o.s.m.simp.stomp.DefaultStompSession     : Connection established in session id=dbff59e4-1a28-cfe5-6e85-567152c1ccf0
+2024-07-20T15:41:57.388-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-8] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing CONNECT session=17764f12-7008-df93-7c42-144da30fd941
+2024-07-20T15:41:57.390-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-10] .WebSocketAnnotationMethodMessageHandler : Searching methods to handle SEND /app/submitNumber session=17764f12-7008-df93-7c42-144da30fd941 application/json payload={"number":"invalid"}, lookupDestination='/submitNumber'
+2024-07-20T15:41:57.390-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-10] .WebSocketAnnotationMethodMessageHandler : Invoking NumberController#copyToList[2 args]
+2024-07-20T15:41:57.393-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-10] .WebSocketAnnotationMethodMessageHandler : Searching methods to handle MethodArgumentNotValidException
+2024-07-20T15:41:57.394-06:00 ERROR 49230 --- [relic-coding-challenge] [clientInboundChannel-10] .WebSocketAnnotationMethodMessageHandler : Unhandled exception from message handler method
+
+org.springframework.messaging.handler.annotation.support.MethodArgumentNotValidException: Could not resolve method parameter at index 0 in public com.example.reliccodingchallenge.dto.ConfirmationResponse com.example.reliccodingchallenge.controller.NumberController.copyToList(com.example.reliccodingchallenge.dto.NumberRequest,org.springframework.messaging.simp.SimpMessageHeaderAccessor) throws java.lang.InterruptedException: 1 error(s): [Field error in object 'numberInput' on field 'number': rejected value [invalid]; codes [Pattern.numberInput.number,Pattern.number,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [numberInput.number,number]; arguments []; default message [number],[Ljakarta.validation.constraints.Pattern$Flag;@28a9d4a6,\d{9}]; default message [Number must be 9 digits.]] 
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.validate(PayloadMethodArgumentResolver.java:223) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:154) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMatch(AbstractMethodMessageHandler.java:567) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:529) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.simp.annotation.support.SimpAnnotationMethodMessageHandler.handleMatch(SimpAnnotationMethodMessageHandler.java:93) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessageInternal(AbstractMethodMessageHandler.java:522) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.handler.invocation.AbstractMethodMessageHandler.handleMessage(AbstractMethodMessageHandler.java:457) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at org.springframework.messaging.support.ExecutorSubscribableChannel$SendTask.run(ExecutorSubscribableChannel.java:152) ~[spring-messaging-6.1.11.jar:6.1.11]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-07-20T15:41:57.398-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:41:57.399-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=c032fd76-0759-e15c-1a46-aeda0a93aa0a, uri=ws://localhost:52076/ws]
+2024-07-20T15:41:57.399-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=c032fd76-0759-e15c-1a46-aeda0a93aa0a, uri=ws://localhost:52076/ws] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:41:57.399-06:00 DEBUG 49230 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-6] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=51eca301-6c6e-afcc-f214-460965c238f3, uri=null] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:41:57.399-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.m.SubProtocolWebSocketHandler    : Clearing session c032fd76-0759-e15c-1a46-aeda0a93aa0a
+2024-07-20T15:41:57.399-06:00 DEBUG 49230 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-6] o.s.m.simp.stomp.DefaultStompSession     : Connection closed in session id=31c81cbd-d7db-c9bd-7d0f-62de0117dd98
+2024-07-20T15:41:57.399-06:00 DEBUG 49230 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-6] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=51eca301-6c6e-afcc-f214-460965c238f3, uri=null]
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-14] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing DISCONNECT session=c032fd76-0759-e15c-1a46-aeda0a93aa0a
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=17764f12-7008-df93-7c42-144da30fd941, uri=ws://localhost:52076/ws]
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=17764f12-7008-df93-7c42-144da30fd941, uri=ws://localhost:52076/ws] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.w.s.m.SubProtocolWebSocketHandler    : Clearing session 17764f12-7008-df93-7c42-144da30fd941
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-7] s.w.s.h.LoggingWebSocketHandlerDecorator : StandardWebSocketSession[id=c3a151cf-16ee-b639-f5bf-692951c61661, uri=null] closed with CloseStatus[code=1001, reason=null]
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-7] o.s.m.simp.stomp.DefaultStompSession     : Connection closed in session id=dbff59e4-1a28-cfe5-6e85-567152c1ccf0
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [WebSocketClient-AsyncIO-7] o.s.w.s.adapter.NativeWebSocketSession   : Closing StandardWebSocketSession[id=c3a151cf-16ee-b639-f5bf-692951c61661, uri=null]
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [clientInboundChannel-17] o.s.m.s.b.SimpleBrokerMessageHandler     : Processing DISCONNECT session=17764f12-7008-df93-7c42-144da30fd941
+2024-07-20T15:41:57.400-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:41:57.400-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-07-20T15:41:57.401-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1fc0d9b4]]
+2024-07-20T15:41:57.401-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1fc0d9b4]
+2024-07-20T15:41:57.401-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@1fc0d9b4]
+2024-07-20T15:41:57.401-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2024-07-20T15:41:57.401-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:57.401-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:57.989-06:00  INFO 49230 --- [relic-coding-challenge] [clientInboundChannel-4] c.e.r.s.i.DuplicatedListNumberService    : Processed unique number: 123456789
+2024-07-20T15:41:57.989-06:00  INFO 49230 --- [relic-coding-challenge] [pool-3-thread-1] c.e.r.s.i.DuplicatedListNumberService    : Number written to file: 123456789
+2024-07-20T15:41:57.996-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
+2024-07-20T15:41:58.000-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2024-07-20T15:41:58.000-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2024-07-20T15:41:58.000-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-07-20T15:41:58.000-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75dbe490]]
+2024-07-20T15:41:58.000-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75dbe490]
+2024-07-20T15:41:58.000-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75dbe490]
+2024-07-20T15:41:58.000-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2024-07-20T15:41:58.000-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:58.000-06:00 DEBUG 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] o.s.m.s.ExecutorSubscribableChannel      : brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2024-07-20T15:41:58.001-06:00  INFO 49230 --- [relic-coding-challenge] [SpringApplicationShutdownHook] c.e.r.s.i.DuplicatedListNumberService    : Executor service shut down
