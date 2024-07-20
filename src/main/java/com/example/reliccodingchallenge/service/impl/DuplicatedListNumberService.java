@@ -1,12 +1,19 @@
 package com.example.reliccodingchallenge.service.impl;
 
+import com.example.reliccodingchallenge.dto.ConfirmationResponse;
+import com.example.reliccodingchallenge.dto.NumberRequest;
 import com.example.reliccodingchallenge.service.NumberService;
+import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
@@ -17,33 +24,65 @@ public class DuplicatedListNumberService implements NumberService {
 
     private final Set<String> uniqueNumbers = new HashSet<>();
 
+    private static final String FILE_PATH = "./resources/static/numbers.log";
+
     private final ExecutorService executorService = Executors.newFixedThreadPool(5);
 
-    @Override
-    @Async
-    public void processNumber(String number) {
-        synchronized (uniqueNumbers) {
-            uniqueNumbers.add(number);
+    @PostConstruct
+    private void init() {
+        try {
+            final Path numbersFilePath = Paths.get(FILE_PATH);
+            Files.deleteIfExists(numbersFilePath);
+            Files.createFile(numbersFilePath);
         }
-        executorService.submit(this::writeToFile);
+        catch(IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
-    public synchronized void writeToFile() {
+    public ConfirmationResponse handleNumberRequest(NumberRequest request, SimpMessageHeaderAccessor messageHeaderAccessor) {
+        String number = request.number();
+
+        if("terminate".equals(number)) {
+            terminateApplication();
+        }
+        if(!number.matches("\\d{9}")) {
+            closeConnection(messageHeaderAccessor);
+            return new ConfirmationResponse("Invalid number");
+        }
+
+        processNumber(number);
+        return new ConfirmationResponse("Number accepted.");
+    }
+
+    @Async
+    protected void processNumber(String number) {
         synchronized (uniqueNumbers) {
-            try(FileWriter writer = new FileWriter("numbers.log")) {
-                for(String number : uniqueNumbers) {
-                    writer.write(number + System.lineSeparator());
-                }
-                uniqueNumbers.clear();
-            }
-            catch(IOException e) {
-                e.printStackTrace();
-            }
+           if(uniqueNumbers.add(number)) {
+               executorService.submit(() -> writeToFile(number));
+           }
+        }
+    }
+
+    private void writeToFile(String number) {
+        try(FileWriter writer = new FileWriter(FILE_PATH, true)) {
+            writer.write(number + System.lineSeparator());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     @PreDestroy
-    public void shutdownExecutorService() {
+    private void shutdown() {
         executorService.shutdown();
     }
+    private void terminateApplication() {
+        shutdown();
+        System.exit(0);
+    }
+
+    private void closeConnection(SimpMessageHeaderAccessor headerAccessor) {
+        headerAccessor.getSessionAttributes().put("close", true);
+    }
+
 }

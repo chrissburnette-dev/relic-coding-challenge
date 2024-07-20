@@ -25,9 +25,8 @@ public class NumberController {
     @MessageMapping("/submitNumber")
     @SendTo("/topic/confirmation")
     public ConfirmationResponse copyToList(@Valid NumberRequest numberInput, SimpMessageHeaderAccessor headerAccessor) throws InterruptedException {
-        Thread.sleep(1000); 
-        numberService.processNumber(numberInput.number());
-        return new ConfirmationResponse("Number Accepted.");
+        Thread.sleep(1000);
+        return numberService.handleNumberRequest(numberInput, headerAccessor);
     }
 
 }
