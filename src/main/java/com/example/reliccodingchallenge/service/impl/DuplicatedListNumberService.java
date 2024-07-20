@@ -3,6 +3,7 @@ package com.example.reliccodingchallenge.service.impl;
 import com.example.reliccodingchallenge.dto.ConfirmationResponse;
 import com.example.reliccodingchallenge.dto.NumberRequest;
 import com.example.reliccodingchallenge.service.NumberService;
+import com.example.reliccodingchallenge.service.StatisticsService;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
@@ -22,11 +23,16 @@ import java.util.concurrent.Executors;
 @Service
 public class DuplicatedListNumberService implements NumberService {
 
+    private final StatisticsService statisticsService;
     private final Set<String> uniqueNumbers = new HashSet<>();
+    private final ExecutorService executorService = Executors.newFixedThreadPool(5);
 
     private static final String FILE_PATH = "./resources/static/numbers.log";
 
-    private final ExecutorService executorService = Executors.newFixedThreadPool(5);
+    public DuplicatedListNumberService(StatisticsService statisticsService) {
+        this.statisticsService = statisticsService;
+    }
+
 
     @PostConstruct
     private void init() {
@@ -61,6 +67,10 @@ public class DuplicatedListNumberService implements NumberService {
         synchronized (uniqueNumbers) {
            if(uniqueNumbers.add(number)) {
                executorService.submit(() -> writeToFile(number));
+               statisticsService.incrementUnique();
+           }
+           else {
+               statisticsService.incrementDuplicate();
            }
         }
     }
