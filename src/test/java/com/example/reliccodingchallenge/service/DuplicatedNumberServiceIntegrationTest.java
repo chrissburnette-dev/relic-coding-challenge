@@ -21,10 +21,6 @@ public class DuplicatedNumberServiceIntegrationTest {
 
     @Autowired
     private StatisticsService statisticsService;
-
-//    @Autowired
-//    private WebSocketSessionManager sessionManager;
-
     @Test
     public void testHandleNumberRequest() {
 

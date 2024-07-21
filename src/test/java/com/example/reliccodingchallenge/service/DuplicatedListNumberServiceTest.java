@@ -33,7 +33,7 @@ public class DuplicatedListNumberServiceTest {
         statisticsService = mock(StatisticsService.class);
         sessionManager = mock(WebSocketSessionManager.class);
         executorService = mock(ExecutorService.class);
-        numberService = new DuplicatedListNumberService(statisticsService, executorService);
+        numberService = new DuplicatedListNumberService(statisticsService, executorService, sessionManager);
     }
 
     @Test

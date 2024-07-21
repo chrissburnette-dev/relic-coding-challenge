@@ -1,5 +1,6 @@
 package com.example.reliccodingchallenge.service.impl;
 
+import com.example.reliccodingchallenge.config.WebSocketSessionManager;
 import com.example.reliccodingchallenge.dto.ConfirmationResponse;
 import com.example.reliccodingchallenge.dto.NumberRequest;
 import com.example.reliccodingchallenge.service.NumberService;
@@ -32,7 +33,7 @@ import java.util.concurrent.Executors;
 public class DuplicatedListNumberService implements NumberService {
 
     private final StatisticsService statisticsService;
-//    private final WebSocketSessionManager webSessionManager;
+    private final WebSocketSessionManager webSessionManager;
     private final Set<String> uniqueNumbers = new HashSet<>();
     private final ExecutorService executorService;
 
@@ -45,16 +46,19 @@ public class DuplicatedListNumberService implements NumberService {
 
     @Autowired
     public DuplicatedListNumberService(StatisticsService statisticsService,
-                                       //WebSocketSessionManager sessionManager,
+                                       WebSocketSessionManager sessionManager,
                                        @Value("${app.thread.pool.size:5}") int threadPoolSize) {
         this.statisticsService = statisticsService;
+        this.webSessionManager = sessionManager;
         this.executorService = Executors.newFixedThreadPool(threadPoolSize);
     }
 
     //Constructor used for testing purposes.
-    public DuplicatedListNumberService(StatisticsService statisticsService, ExecutorService executorService) {
+    public DuplicatedListNumberService(StatisticsService statisticsService, ExecutorService executorService,
+                                       WebSocketSessionManager sessionManager) {
         this.statisticsService = statisticsService;
         this.executorService = executorService;
+        this.webSessionManager = sessionManager;
     }
 
     @PostConstruct
@@ -126,7 +130,7 @@ public class DuplicatedListNumberService implements NumberService {
     }
 
     private void closeConnection(SimpMessageHeaderAccessor headerAccessor) {
-        //webSessionManager.closeSession(headerAccessor.getSessionId());
+        webSessionManager.closeSession(headerAccessor.getSessionId());
         logger.info("Connection closed due to invalid input.");
     }
 
