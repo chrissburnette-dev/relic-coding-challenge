@@ -1,8 +1,11 @@
 package com.example.reliccodingchallenge.service;
 
 
+import com.example.reliccodingchallenge.config.WebSocketSessionManager;
 import com.example.reliccodingchallenge.dto.ConfirmationResponse;
 import com.example.reliccodingchallenge.dto.NumberRequest;
+import com.example.reliccodingchallenge.service.impl.DuplicatedListNumberService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +21,9 @@ public class DuplicatedNumberServiceIntegrationTest {
 
     @Autowired
     private StatisticsService statisticsService;
+
+//    @Autowired
+//    private WebSocketSessionManager sessionManager;
 
     @Test
     public void testHandleNumberRequest() {

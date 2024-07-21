@@ -8,6 +8,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.scheduling.annotation.Async;
@@ -31,26 +32,42 @@ import java.util.concurrent.Executors;
 public class DuplicatedListNumberService implements NumberService {
 
     private final StatisticsService statisticsService;
+//    private final WebSocketSessionManager webSessionManager;
     private final Set<String> uniqueNumbers = new HashSet<>();
-    private final ExecutorService executorService = Executors.newFixedThreadPool(5);
-    private static final String FILE_PATH = "./resources/static/numbers.log";
-    private static final Logger logger = LoggerFactory.getLogger(DuplicatedListNumberService.class);
+    private final ExecutorService executorService;
+
+    @Value("${app.file.path:./numbers.log}")
+    private String FILE_PATH;
 
     @Value("${app.terminate.on.exit:false}")
     private boolean terminateOnExit;
+    private static final Logger logger = LoggerFactory.getLogger(DuplicatedListNumberService.class);
 
-    public DuplicatedListNumberService(StatisticsService statisticsService) {
+    @Autowired
+    public DuplicatedListNumberService(StatisticsService statisticsService,
+                                       //WebSocketSessionManager sessionManager,
+                                       @Value("${app.thread.pool.size:5}") int threadPoolSize) {
         this.statisticsService = statisticsService;
+        this.executorService = Executors.newFixedThreadPool(threadPoolSize);
+    }
+
+    //Constructor used for testing purposes.
+    public DuplicatedListNumberService(StatisticsService statisticsService, ExecutorService executorService) {
+        this.statisticsService = statisticsService;
+        this.executorService = executorService;
     }
 
     @PostConstruct
     private void init() {
         try {
             final Path numbersFilePath = Paths.get(FILE_PATH);
-            Files.createDirectories(numbersFilePath.getParent());
-            Files.deleteIfExists(numbersFilePath);
+            if (Files.exists(numbersFilePath)) {
+                Files.delete(numbersFilePath);
+            } else {
+                Files.createDirectories(numbersFilePath.getParent());
+            }
             Files.createFile(numbersFilePath);
-            logger.info("Log info created at {}", FILE_PATH);
+            logger.info("Log file created at {}", FILE_PATH);
         }
         catch(IOException e) {
             logger.error("Error initializing log file", e);
@@ -61,7 +78,8 @@ public class DuplicatedListNumberService implements NumberService {
     public ConfirmationResponse handleNumberRequest(NumberRequest request, SimpMessageHeaderAccessor messageHeaderAccessor) {
         String number = request.number();
 
-        if(number.equalsIgnoreCase("Terminate")) {
+        // Validation, in case Annotation is discarded.
+        if("Terminate".equalsIgnoreCase(number)) {
             logger.info("Received termination command.");
             terminateApplication();
             return new ConfirmationResponse("Application terminating..");
@@ -99,11 +117,6 @@ public class DuplicatedListNumberService implements NumberService {
             logger.error("Error writing to log file", e);
         }
     }
-    @PreDestroy
-    private void shutdown() {
-        executorService.shutdown();
-        logger.info("Executor service shut down");
-    }
     private void terminateApplication() {
         shutdown();
         if(terminateOnExit) {
@@ -113,8 +126,17 @@ public class DuplicatedListNumberService implements NumberService {
     }
 
     private void closeConnection(SimpMessageHeaderAccessor headerAccessor) {
-        headerAccessor.getSessionAttributes().put("close", true);
+        //webSessionManager.closeSession(headerAccessor.getSessionId());
         logger.info("Connection closed due to invalid input.");
     }
 
+    @PreDestroy
+    private void shutdown() {
+        executorService.shutdown();
+        logger.info("Executor service shut down");
+    }
+
+    public ExecutorService getExecutorService() {
+        return this.executorService;
+    }
 }

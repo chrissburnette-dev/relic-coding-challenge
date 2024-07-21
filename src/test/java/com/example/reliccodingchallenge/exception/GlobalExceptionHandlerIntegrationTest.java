@@ -39,7 +39,6 @@ public class GlobalExceptionHandlerIntegrationTest {
 
         NumberRequest request = new NumberRequest("invalid");
         session.send("/app/submitNumber", request);
-
     }
 
 }

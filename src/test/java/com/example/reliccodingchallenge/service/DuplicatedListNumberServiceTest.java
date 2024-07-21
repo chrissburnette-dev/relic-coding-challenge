@@ -1,13 +1,16 @@
 package com.example.reliccodingchallenge.service;
 
+import com.example.reliccodingchallenge.config.WebSocketSessionManager;
 import com.example.reliccodingchallenge.dto.ConfirmationResponse;
 import com.example.reliccodingchallenge.dto.NumberRequest;
 import com.example.reliccodingchallenge.service.impl.DuplicatedListNumberService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,14 +23,17 @@ public class DuplicatedListNumberServiceTest {
 
     private StatisticsService statisticsService;
 
+    private WebSocketSessionManager sessionManager;
+
     private ExecutorService executorService;
+
+
     @BeforeEach
     public void setUp() {
         statisticsService = mock(StatisticsService.class);
+        sessionManager = mock(WebSocketSessionManager.class);
         executorService = mock(ExecutorService.class);
-        numberService = new DuplicatedListNumberService(statisticsService);
-
-        ReflectionTestUtils.setField(numberService, "executorService", executorService);
+        numberService = new DuplicatedListNumberService(statisticsService, executorService);
     }
 
     @Test
@@ -38,8 +44,13 @@ public class DuplicatedListNumberServiceTest {
         ConfirmationResponse response = numberService.handleNumberRequest(request, headerAccessor);
 
         assertEquals("Number accepted.", response.message());
+
         verify(statisticsService).incrementUnique();
-        verify(executorService).submit(any(Runnable.class));
+
+        ArgumentCaptor<Runnable> captor = ArgumentCaptor.forClass(Runnable.class);
+        verify(executorService).submit(captor.capture());
+
+        //captor.getValue().run();
 
     }
     @Test

@@ -6,5 +6,4 @@ import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 
 public interface NumberService {
     ConfirmationResponse handleNumberRequest(NumberRequest request, SimpMessageHeaderAccessor messageHeaderAccessor);
-
 }
